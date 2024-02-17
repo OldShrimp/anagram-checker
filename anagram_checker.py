@@ -1,9 +1,12 @@
 import sys, argparse
 
 def charToPrime(ch):
-    primedict = {'\n':1, ' ':1, 'a':2, 'b':3, 'c':5, 'd':7, 'e':11, 'f':13, 'g':17, 'h':19, 'i':23, 'j':27, 'k':29,
-                 'l':31, 'm':37, 'n':41, 'o':43, 'p':47, 'q':53, 'r':59, 's':61, 't':67, 'u':71,
-                 'v':73, 'w':79, 'x':83, 'y':89, 'z':97}
+    if not ch.isalpha():
+        return 1
+    
+    primedict = {'e':2, 't':3, 'a':5, 'o':7, 'i':11, 'n':13, 's':17, 'h':19, 'r':23, 'd':27, 'l':29,
+                 'c':31, 'u':37, 'm':41, 'w':43, 'f':47, 'g':53, 'y':59, 'p':61, 'b':67, 'v':71,
+                 'k':73, 'x':79, 'j':83, 'q':89, 'z':97}
     return primedict[ch.lower()]
 
 def strToPrimeProduct(st):
